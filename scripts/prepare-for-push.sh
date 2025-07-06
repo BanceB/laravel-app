@@ -21,9 +21,9 @@ fi
 echo "🔁 Nettoyage des dossiers lourds (hors Git)..."
 rm -rf vendor node_modules storage/logs/*
 
-## utile lorsque composer est installer.
-#echo "📦 Réinstallation des dépendances PHP (via Docker)..."
-#docker-compose exec app composer install
+
+echo "📦 Réinstallation des dépendances PHP (via Docker)..."
+docker-compose exec app composer install
 
 echo "⚙️ Compilation des assets front-end (prod)..."
 docker-compose run --rm frontend sh -c "npm run build"

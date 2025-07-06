@@ -15,9 +15,9 @@ fi
 # Lancer les conteneurs Docker (build si besoin)
 docker-compose up -d --build
 
-## (important si composer est installer)
-#echo "📦 Installation des dépendances PHP..."
-#docker-compose exec app composer install
+
+echo "📦 Installation des dépendances PHP..."
+docker-compose exec app composer install
 
 echo "📦 Installation des dépendances JS... et ⚙️ Compilation des assets front-end..."
 docker-compose run --rm frontend sh -c "npm install && npm run build"
