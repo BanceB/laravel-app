@@ -1,0 +1,67 @@
+#######################################
+# 🔒 Fichiers sensibles d'environnement
+#######################################
+.env
+.env.backup
+.env.production
+auth.json
+
+########################################
+# ⚙️ Fichiers de configuration personnelles
+########################################
+.phpactor.json
+.phpunit.result.cache
+.phpunit.cache
+Homestead.json
+Homestead.yaml
+
+##################################
+# 🧠 Dossiers d’IDE et outils locaux
+##################################
+/.fleet/
+/.idea/
+/.vscode/
+/.nova/
+/.zed/
+
+##################################
+# 📦 Dépendances et build
+##################################
+/node_modules/
+/vendor/
+/public/build/
+/public/hot/
+/public/storage/
+
+##################################
+# 🗄️ Stockage et clés privées
+##################################
+/storage/*.key
+/storage/pail
+
+##################################
+# 🗑️ Fichiers inutiles et système
+##################################
+*.log
+.DS_Store
+Thumbs.db
+
+
+
+###############################################
+# 💡 Explication rapide par groupe :
+
+# 🔒 Environnement : Empêche l’exposition de secrets ou de config de production.
+
+# ⚙️ Config locales : Évite les fichiers temporaires propres à ton environnement de développement.
+
+# 🧠 IDE : Ne versionne pas les fichiers de configuration de VSCode, PhpStorm, Nova…
+
+# 📦 Dépendances : Ces dossiers sont régénérés avec composer install ou npm install.
+
+# 🗄️ Storage : Contient des fichiers générés ou sensibles, inutiles dans Git.
+
+# 🗑️ Système : Fichiers générés par macOS ou Windows (comme .DS_Store, Thumbs.db).
+
+##########################################################
+
