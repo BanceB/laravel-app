@@ -18,7 +18,7 @@ else
   echo ".env.example existe déjà"
 fi
 
-echo "🔁 Nettoyage des dossiers lourds (hors Git)..."
+echo "🔁 Nettoyage des dossiers lourds (hors Git)....."
 rm -rf vendor node_modules storage/logs/*
 
 
