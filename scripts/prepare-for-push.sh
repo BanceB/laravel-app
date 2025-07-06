@@ -23,7 +23,7 @@ rm -rf vendor node_modules storage/logs/*
 
 
 echo "📦 Réinstallation des dépendances PHP (via Docker)..."
-docker-compose exec app composer install
+docker-compose run --rm app composer install
 
 echo "⚙️ Compilation des assets front-end (prod)..."
 docker-compose run --rm frontend sh -c "npm run build"
@@ -31,9 +31,9 @@ docker-compose run --rm frontend sh -c "npm run build"
 
 
 echo "🧹 Vidage des caches Laravel..."
-docker-compose exec app php artisan config:clear
-docker-compose exec app php artisan route:clear
-docker-compose exec app php artisan view:clear
-docker-compose exec app php artisan cache:clear
+docker-compose run --rm app php artisan config:clear
+docker-compose run --rm app php artisan route:clear
+docker-compose run --rm app php artisan view:clear
+docker-compose run --rm app php artisan cache:clear
 
 echo "✅ Projet nettoyé, compilé, prêt à être poussé 🚀"
